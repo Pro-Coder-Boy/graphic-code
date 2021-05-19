@@ -1,0 +1,52 @@
+from turtle import*
+def write_text(x, y, size, c , text):
+    penup()
+    goto(x,y)
+    pendown()
+    color(c)
+    style = ('b yekan', size, 'bold')
+    write(text, font=style, align='center')
+def circle_draw(x,y,r,l_w,l_c,f_c):
+    penup()
+    goto(x,y)
+    pendown()
+    pensize(l_w)
+    color(l_c)
+    fillcolor(f_c)
+    begin_fill()
+    circle(r)
+    end_fill()
+def square(x,y,w,h,l_w,f_c,l_c):
+    penup()
+    goto(x,y)
+    pendown()
+    pensize(l_w)
+    color(l_c)
+    fillcolor(f_c)
+    begin_fill()
+    forward(w)
+    left(90)
+    forward(h)
+    left(90)
+    forward(w)
+    left(90)
+    forward(h)
+    end_fill()
+    left(90)
+#bus
+square(-300,0,600,200,10,"yellow","orange")
+#windows
+square(-280,+100,80,80,5,"lightblue","blue")
+square(-180,+100,80,80,5,"lightblue","blue")
+square(-80,+100,80,80,5,"lightblue","blue")
+square(+20,+100,80,80,5,"lightblue","blue")
+square(+120,+100,80,80,5,"lightblue","blue")
+square(+220,+60,60,120,5,"lightblue","blue")
+#weels
+circle_draw(-220,-15,30,20,"black","gray")
+circle_draw(+220,-15,30,20,"black","gray")
+#yasan
+write_text(0, 10, 40, "white" , "آکادمي ياسان")
+#lights
+square(+280,+20,20,20,5,"pink","red")
+square(-290,+20,20,20,5,"pink","red")
